@@ -13,7 +13,7 @@ Process:
   7. Saves the split data into a standard structure for model training.
 
 Inputs:
-  - DATA/weather_images/{class_name}/*.{jpg,png,tif,...}
+  - DATA/raw_weather_images/{class_name}/*.{jpg,png,tif,...}
   
   Required structure:
       • One folder per weather class.
@@ -39,7 +39,7 @@ import random
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DATA_DIR   = SCRIPT_DIR.parent / "DATA"
-RAW_ROOT   = DATA_DIR / "weather_images"
+RAW_ROOT   = DATA_DIR / "raw_weather_images"
 
 # Where cleaned images will be written
 CLEAN_ROOT = DATA_DIR / "cleaned_data"
