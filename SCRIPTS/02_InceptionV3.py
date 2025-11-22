@@ -27,6 +27,7 @@ Outputs:
 from pathlib import Path
 import numpy as np
 import tensorflow as tf
+tf.config.set_visible_devices([], "GPU")
 from tensorflow.keras import layers, models, optimizers, callbacks
 from tensorflow.keras.applications import InceptionV3
 from tensorflow.keras.applications.inception_v3 import preprocess_input
@@ -48,7 +49,7 @@ FINAL_MODEL_PATH = OUTPUT_DIR / "inceptionv3_final.keras"
 
 IMAGE_SIZE = (224, 224)
 BATCH_SIZE = 32
-EPOCHS = 10
+EPOCHS = 1
 RNG_SEED = 42
 AUTOTUNE = tf.data.AUTOTUNE
 
